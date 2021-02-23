@@ -14,28 +14,27 @@ import java.util.Map;
 public class Login {
     public String data;
     public String json;
+
     public Login(String data) {
         this.data = data;
     }
 
-    public String Return(String data){
+    public String Return(String data) {
 
-        System.out.println("aaa"+data);
-        User user= JSON.parseObject(data,User.class);
-        String uid= user.getUid();
-        String pwd= user.getPwd();
-        if (RedisOperating.exits(uid)){
-            if (pwd==RedisOperating.get(uid)){
+        System.out.println("aaa" + data);
+        User user = JSON.parseObject(data, User.class);
+        String uid = user.getUid();
+        String pwd = user.getPwd();
+        if (RedisOperating.exits(uid)) {
+            if (pwd == RedisOperating.get(uid)) {
                 return "t";
-            }
-            else
+            } else
                 return "f";
-        }
-        else {
+        } else {
             HbaseUtils hbaseUtils = new HbaseUtils();
-            Map<String,String> map = hbaseUtils.selectData("user",uid);
+            Map<String, String> map = hbaseUtils.selectData("user", uid);
             String res = map.get("pwd");
-            if (pwd==res)
+            if (pwd == res)
                 return "t";
             else
                 return "f";

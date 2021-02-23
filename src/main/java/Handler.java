@@ -1,4 +1,3 @@
-import Controller.hello;
 import Websocket.ChannelSupervise;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -14,20 +13,17 @@ import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.handler.codec.http.DefaultFullHttpResponse;
 import io.netty.handler.codec.http.FullHttpRequest;
-import io.netty.handler.codec.http.HttpResponseStatus;
-import io.netty.handler.codec.http.HttpVersion;
 import io.netty.handler.codec.http.websocketx.*;
 import io.netty.util.CharsetUtil;
 import io.netty.util.concurrent.GlobalEventExecutor;
 import org.apache.log4j.Logger;
+import util.ThreadPool;
 
 import java.io.IOException;
-import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.util.Date;
 
 import static io.netty.handler.codec.http.HttpHeaderNames.*;
 import static io.netty.handler.codec.http.HttpResponseStatus.OK;
@@ -58,7 +54,7 @@ public class Handler extends ChannelInboundHandlerAdapter {
             ctx.writeAndFlush(response);
         } else if (o instanceof WebSocketFrame) {
             logger.info("websocket");
-            handlerWebSocketFrame(ctx, (TextWebSocketFrame) o);
+            handleWebSocketFrame(ctx, (TextWebSocketFrame) o);
             // judgement_action(((TextWebSocketFrame) o).text(),ctx.channel());
         }
         logger.info("返回数据" + json);
@@ -70,7 +66,7 @@ public class Handler extends ChannelInboundHandlerAdapter {
     private String handleHttpRequest(ChannelHandlerContext ctx, FullHttpRequest fuHr) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
         String url = fuHr.uri();
         System.out.println("method:" + fuHr.method());
-        String json = "666666";
+        String json;
         /**
          * 唯一的一次http请求，用于创建websocket
          * */
@@ -89,10 +85,7 @@ public class Handler extends ChannelInboundHandlerAdapter {
             String className = "Controller." + url.split("/")[1];
             String methodName = "Return";
             Class clz = Class.forName(className);
-            //Constructor constructor = clz.getConstructor(String.class);
-            // Object object = constructor.newInstance(data);
             Object object = clz.newInstance();
-            //System.out.println(data);
             Method m = object.getClass().getDeclaredMethod(methodName, String.class);
             json = (String) m.invoke(object, data);
             System.out.println(json);
@@ -136,7 +129,7 @@ public class Handler extends ChannelInboundHandlerAdapter {
         ctx.flush();
     }
 
-    private void handlerWebSocketFrame(final ChannelHandlerContext ctx, WebSocketFrame frame) throws IOException {
+    private void handleWebSocketFrame(final ChannelHandlerContext ctx, WebSocketFrame frame) throws IOException {
         // 判断是否关闭链路的指令
         if (frame instanceof CloseWebSocketFrame) {
             handshaker.close(ctx.channel(), (CloseWebSocketFrame) frame.retain());
@@ -170,7 +163,8 @@ public class Handler extends ChannelInboundHandlerAdapter {
         channel.basicQos(1);
         final QueueingConsumer consumer = new QueueingConsumer(channel);
         channel.basicConsume(queue_name, autoAck, consumer);
-        new Thread() {
+        ThreadPool threadPool = new ThreadPool();
+        threadPool.execute(new Runnable() {
             @Override
             public void run() {
                 while (true) {
@@ -193,8 +187,7 @@ public class Handler extends ChannelInboundHandlerAdapter {
 
                 }
             }
-        }.start();
-
+        });
 
     }
 

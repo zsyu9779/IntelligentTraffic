@@ -13,41 +13,45 @@ import java.util.HashMap;
 public class lightconf {
     public String Jsonin;
     public String Jsonout;
-    public lightconf(String Jsonin){
-        this.Jsonin=Jsonin;
+
+    public lightconf(String Jsonin) {
+        this.Jsonin = Jsonin;
     }
-    public String view(){
+
+    public String view() {
         HbaseUtils hbaseUtils = new HbaseUtils();
-        Data d = JSON.parseObject(Jsonin,Data.class);
+        Data d = JSON.parseObject(Jsonin, Data.class);
         String rid = d.getRid();
-        HashMap map = (HashMap) hbaseUtils.selectData("conf",rid);
+        HashMap map = (HashMap) hbaseUtils.selectData("conf", rid);
         Jsonout = JSON.toJSONString(map);
         return Jsonout;
     }
-    public String add(){
+
+    public String add() {
         HbaseUtils hbaseUtils = new HbaseUtils();
-        Data d = JSON.parseObject(Jsonin,Data.class);
+        Data d = JSON.parseObject(Jsonin, Data.class);
         String rid = d.getRid();
         String mid = d.getMid();
         String begin = d.getBegin();
         String end = d.getEnd();
         String time = d.getTime();
-        hbaseUtils.insertData("conf",rid,"light","mid",mid);
-        hbaseUtils.insertData("conf",rid,"light",mid+"begin",begin);
-        hbaseUtils.insertData("conf",rid,"light",mid+"end",end);
-        hbaseUtils.insertData("conf",rid,"light",mid+"time",time);
+        hbaseUtils.insertData("conf", rid, "light", "mid", mid);
+        hbaseUtils.insertData("conf", rid, "light", mid + "begin", begin);
+        hbaseUtils.insertData("conf", rid, "light", mid + "end", end);
+        hbaseUtils.insertData("conf", rid, "light", mid + "time", time);
         Jsonout = "t";
         return Jsonout;
     }
-    public String delete(){
+
+    public String delete() {
         HbaseUtils hbaseUtils = new HbaseUtils();
-        Data d = JSON.parseObject(Jsonin,Data.class);
+        Data d = JSON.parseObject(Jsonin, Data.class);
         String rid = d.getRid();
         String mid = d.getMid();
-        hbaseUtils.insertData("conf",rid,"light","mid",mid);
-        hbaseUtils.insertData("conf",rid,"light",mid+"begin","");
-        hbaseUtils.insertData("conf",rid,"light",mid+"end","");
-        hbaseUtils.insertData("conf",rid,"light",mid+"time","");
+        hbaseUtils.insertData("conf", rid, "light", "mid", mid);
+        hbaseUtils.insertData("conf", rid, "light", mid + "begin", "");
+        hbaseUtils.insertData("conf", rid, "light", mid + "end", "");
+        hbaseUtils.insertData("conf", rid, "light", mid + "time", "");
         Jsonout = "t";
         return Jsonout;
     }

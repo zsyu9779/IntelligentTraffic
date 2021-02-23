@@ -13,41 +13,45 @@ import java.util.HashMap;
 public class roadconf {
     public String Jsonin;
     public String Jsonout;
-    public roadconf(String Jsonin){
-        this.Jsonin=Jsonin;
+
+    public roadconf(String Jsonin) {
+        this.Jsonin = Jsonin;
     }
-    public String view(){
+
+    public String view() {
         HbaseUtils hbaseUtils = new HbaseUtils();
-        Data d = JSON.parseObject(Jsonin,Data.class);
+        Data d = JSON.parseObject(Jsonin, Data.class);
         String rid = d.getRid();
-        HashMap map = (HashMap) hbaseUtils.selectData("conf",rid);
+        HashMap map = (HashMap) hbaseUtils.selectData("conf", rid);
         Jsonout = JSON.toJSONString(map);
         return Jsonout;
     }
-    public String add(){
+
+    public String add() {
         HbaseUtils hbaseUtils = new HbaseUtils();
-        Data d = JSON.parseObject(Jsonin,Data.class);
+        Data d = JSON.parseObject(Jsonin, Data.class);
         String rid = d.getRid();
         String mid = d.getMid();
         String begin = d.getBegin();
         String end = d.getEnd();
         String pos = d.getPos();
-        hbaseUtils.insertData("conf",rid,"road","mid",mid);
-        hbaseUtils.insertData("conf",rid,"road",mid+"begin",begin);
-        hbaseUtils.insertData("conf",rid,"road",mid+"end",end);
-        hbaseUtils.insertData("conf",rid,"road",mid+"pos",pos);
+        hbaseUtils.insertData("conf", rid, "road", "mid", mid);
+        hbaseUtils.insertData("conf", rid, "road", mid + "begin", begin);
+        hbaseUtils.insertData("conf", rid, "road", mid + "end", end);
+        hbaseUtils.insertData("conf", rid, "road", mid + "pos", pos);
         Jsonout = "t";
         return Jsonout;
     }
-    public String delete(){
+
+    public String delete() {
         HbaseUtils hbaseUtils = new HbaseUtils();
-        Data d = JSON.parseObject(Jsonin,Data.class);
+        Data d = JSON.parseObject(Jsonin, Data.class);
         String rid = d.getRid();
         String mid = d.getMid();
-        hbaseUtils.insertData("conf",rid,"road","mid",mid);
-        hbaseUtils.insertData("conf",rid,"road",mid+"begin","");
-        hbaseUtils.insertData("conf",rid,"road",mid+"end","");
-        hbaseUtils.insertData("conf",rid,"road",mid+"pos","");
+        hbaseUtils.insertData("conf", rid, "road", "mid", mid);
+        hbaseUtils.insertData("conf", rid, "road", mid + "begin", "");
+        hbaseUtils.insertData("conf", rid, "road", mid + "end", "");
+        hbaseUtils.insertData("conf", rid, "road", mid + "pos", "");
         Jsonout = "t";
         return Jsonout;
     }
