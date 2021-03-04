@@ -1,4 +1,4 @@
-package util;
+package com.manager.traffic.util;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import java.util.concurrent.*;

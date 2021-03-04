@@ -1,4 +1,6 @@
-import Websocket.ChannelSupervise;
+package com.manager.traffic;
+
+import com.manager.traffic.Websocket.ChannelSupervise;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
@@ -17,7 +19,7 @@ import io.netty.handler.codec.http.websocketx.*;
 import io.netty.util.CharsetUtil;
 import io.netty.util.concurrent.GlobalEventExecutor;
 import org.apache.log4j.Logger;
-import util.ThreadPool;
+import com.manager.traffic.util.ThreadPool;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -82,7 +84,7 @@ public class Handler extends ChannelInboundHandlerAdapter {
             ByteBuf byteBuf = fuHr.content();
             String data = byteBuf.toString(Charset.forName("utf-8"));
             logger.info("data " + data);
-            String className = "Controller." + url.split("/")[1];
+            String className = "com.manager.traffic.Controller." + url.split("/")[1];
             String methodName = "Return";
             Class clz = Class.forName(className);
             Object object = clz.newInstance();

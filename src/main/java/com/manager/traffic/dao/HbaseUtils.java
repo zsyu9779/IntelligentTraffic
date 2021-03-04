@@ -1,4 +1,4 @@
-package dao;
+package com.manager.traffic.dao;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.*;

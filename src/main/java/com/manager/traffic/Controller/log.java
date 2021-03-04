@@ -1,4 +1,4 @@
-package Controller;
+package com.manager.traffic.Controller;
 
 /**
  * @Author: Zsyu

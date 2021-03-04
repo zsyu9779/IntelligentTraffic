@@ -1,4 +1,6 @@
-package pojo;
+package com.manager.traffic.pojo;
+
+import lombok.Data;
 
 import java.util.List;
 
@@ -6,8 +8,8 @@ import java.util.List;
  * @Author: Zsyu
  * @Date: 19-8-6 上午9:39
  */
-@lombok.Data
-public class Data {
+@Data
+public class TrafficInfo {
     private String uid;
 
     private String mid;

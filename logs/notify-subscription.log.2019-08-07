@@ -47,7 +47,7 @@
 2019-08-07 01:18:19,115 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
 2019-08-07 01:18:26,600 - -Dio.netty.buffer.checkAccessible: true
 2019-08-07 01:18:26,600 - -Dio.netty.buffer.checkBounds: true
-2019-08-07 01:18:26,601 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@55a50553
+2019-08-07 01:18:26,601 - Loaded default ResourceLeakDetector: io.netty.com.manager.traffic.util.ResourceLeakDetector@55a50553
 2019-08-07 01:18:26,643 - 客户端加入连接：[id: 0xf20e11e6, L:/127.0.0.1:6789 - R:/127.0.0.1:33544]
 2019-08-07 01:18:26,649 - -Dio.netty.recycler.maxCapacityPerThread: 4096
 2019-08-07 01:18:26,649 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
@@ -121,7 +121,7 @@
 2019-08-07 16:59:44,152 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
 2019-08-07 17:00:14,488 - -Dio.netty.buffer.checkAccessible: true
 2019-08-07 17:00:14,488 - -Dio.netty.buffer.checkBounds: true
-2019-08-07 17:00:14,489 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@c69450f
+2019-08-07 17:00:14,489 - Loaded default ResourceLeakDetector: io.netty.com.manager.traffic.util.ResourceLeakDetector@c69450f
 2019-08-07 17:00:14,539 - 客户端加入连接：[id: 0xf3bfbeb2, L:/127.0.0.1:6789 - R:/127.0.0.1:35134]
 2019-08-07 17:00:14,547 - -Dio.netty.recycler.maxCapacityPerThread: 4096
 2019-08-07 17:00:14,547 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
@@ -148,7 +148,7 @@
 2019-08-07 17:10:16,082 - websocket
 2019-08-07 17:10:16,083 - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
 java.lang.ClassCastException: io.netty.handler.codec.http.websocketx.CloseWebSocketFrame cannot be cast to io.netty.handler.codec.http.websocketx.TextWebSocketFrame
-	at Handler.channelRead(Handler.java:61)
+	at com.manager.traffic.Handler.channelRead(com.manager.traffic.Handler.java:61)
 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
@@ -166,10 +166,10 @@ java.lang.ClassCastException: io.netty.handler.codec.http.websocketx.CloseWebSoc
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:617)
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:534)
 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.com.manager.traffic.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
+	at io.netty.com.manager.traffic.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.com.manager.traffic.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.com.manager.traffic.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 2019-08-07 17:10:16,086 - 客户端断开连接：[id: 0xf3bfbeb2, L:/127.0.0.1:6789 ! R:/127.0.0.1:35134]
 2019-08-07 17:10:16,109 - 客户端加入连接：[id: 0xd86199ce, L:/127.0.0.1:6789 - R:/127.0.0.1:35296]
@@ -184,7 +184,7 @@ java.lang.ClassCastException: io.netty.handler.codec.http.websocketx.CloseWebSoc
 2019-08-07 17:10:17,341 - websocket
 2019-08-07 17:10:17,342 - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
 java.lang.ClassCastException: io.netty.handler.codec.http.websocketx.CloseWebSocketFrame cannot be cast to io.netty.handler.codec.http.websocketx.TextWebSocketFrame
-	at Handler.channelRead(Handler.java:61)
+	at com.manager.traffic.Handler.channelRead(com.manager.traffic.Handler.java:61)
 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
@@ -202,10 +202,10 @@ java.lang.ClassCastException: io.netty.handler.codec.http.websocketx.CloseWebSoc
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:617)
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:534)
 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.com.manager.traffic.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
+	at io.netty.com.manager.traffic.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.com.manager.traffic.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.com.manager.traffic.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 2019-08-07 17:10:17,347 - 客户端断开连接：[id: 0xd86199ce, L:/127.0.0.1:6789 ! R:/127.0.0.1:35296]
 2019-08-07 17:10:17,357 - 客户端加入连接：[id: 0xe1e95644, L:/127.0.0.1:6789 - R:/127.0.0.1:35302]
@@ -220,7 +220,7 @@ java.lang.ClassCastException: io.netty.handler.codec.http.websocketx.CloseWebSoc
 2019-08-07 17:10:17,719 - websocket
 2019-08-07 17:10:17,719 - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
 java.lang.ClassCastException: io.netty.handler.codec.http.websocketx.CloseWebSocketFrame cannot be cast to io.netty.handler.codec.http.websocketx.TextWebSocketFrame
-	at Handler.channelRead(Handler.java:61)
+	at com.manager.traffic.Handler.channelRead(com.manager.traffic.Handler.java:61)
 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
@@ -238,10 +238,10 @@ java.lang.ClassCastException: io.netty.handler.codec.http.websocketx.CloseWebSoc
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:617)
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:534)
 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.com.manager.traffic.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
+	at io.netty.com.manager.traffic.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.com.manager.traffic.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.com.manager.traffic.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 2019-08-07 17:10:17,722 - 客户端断开连接：[id: 0xe1e95644, L:/127.0.0.1:6789 ! R:/127.0.0.1:35302]
 2019-08-07 17:10:17,736 - 客户端加入连接：[id: 0x77ca6c8f, L:/127.0.0.1:6789 - R:/127.0.0.1:35306]
@@ -256,7 +256,7 @@ java.lang.ClassCastException: io.netty.handler.codec.http.websocketx.CloseWebSoc
 2019-08-07 17:10:17,913 - websocket
 2019-08-07 17:10:17,913 - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
 java.lang.ClassCastException: io.netty.handler.codec.http.websocketx.CloseWebSocketFrame cannot be cast to io.netty.handler.codec.http.websocketx.TextWebSocketFrame
-	at Handler.channelRead(Handler.java:61)
+	at com.manager.traffic.Handler.channelRead(com.manager.traffic.Handler.java:61)
 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
@@ -274,10 +274,10 @@ java.lang.ClassCastException: io.netty.handler.codec.http.websocketx.CloseWebSoc
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:617)
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:534)
 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.com.manager.traffic.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
+	at io.netty.com.manager.traffic.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.com.manager.traffic.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.com.manager.traffic.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 2019-08-07 17:10:17,916 - 客户端断开连接：[id: 0x77ca6c8f, L:/127.0.0.1:6789 ! R:/127.0.0.1:35306]
 2019-08-07 17:10:17,938 - 客户端加入连接：[id: 0x3731be9f, L:/127.0.0.1:6789 - R:/127.0.0.1:35310]
@@ -292,7 +292,7 @@ java.lang.ClassCastException: io.netty.handler.codec.http.websocketx.CloseWebSoc
 2019-08-07 17:10:18,152 - websocket
 2019-08-07 17:10:18,152 - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
 java.lang.ClassCastException: io.netty.handler.codec.http.websocketx.CloseWebSocketFrame cannot be cast to io.netty.handler.codec.http.websocketx.TextWebSocketFrame
-	at Handler.channelRead(Handler.java:61)
+	at com.manager.traffic.Handler.channelRead(com.manager.traffic.Handler.java:61)
 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
@@ -310,10 +310,10 @@ java.lang.ClassCastException: io.netty.handler.codec.http.websocketx.CloseWebSoc
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:617)
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:534)
 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.com.manager.traffic.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
+	at io.netty.com.manager.traffic.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.com.manager.traffic.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.com.manager.traffic.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 2019-08-07 17:10:18,153 - 客户端断开连接：[id: 0x3731be9f, L:/127.0.0.1:6789 ! R:/127.0.0.1:35310]
 2019-08-07 17:10:18,169 - 客户端加入连接：[id: 0x08d686b7, L:/127.0.0.1:6789 - R:/127.0.0.1:35314]
@@ -328,7 +328,7 @@ java.lang.ClassCastException: io.netty.handler.codec.http.websocketx.CloseWebSoc
 2019-08-07 17:18:49,240 - websocket
 2019-08-07 17:18:49,240 - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
 java.lang.ClassCastException: io.netty.handler.codec.http.websocketx.CloseWebSocketFrame cannot be cast to io.netty.handler.codec.http.websocketx.TextWebSocketFrame
-	at Handler.channelRead(Handler.java:61)
+	at com.manager.traffic.Handler.channelRead(com.manager.traffic.Handler.java:61)
 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
@@ -346,9 +346,9 @@ java.lang.ClassCastException: io.netty.handler.codec.http.websocketx.CloseWebSoc
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:617)
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:534)
 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.com.manager.traffic.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
+	at io.netty.com.manager.traffic.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.com.manager.traffic.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.com.manager.traffic.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 2019-08-07 17:18:49,241 - 客户端断开连接：[id: 0x08d686b7, L:/127.0.0.1:6789 ! R:/127.0.0.1:35314]

@@ -1,8 +1,8 @@
-package Controller;
+package com.manager.traffic.Controller;
 
 import com.alibaba.fastjson.JSON;
-import dao.HbaseUtils;
-import pojo.Data;
+import com.manager.traffic.dao.HbaseUtils;
+import com.manager.traffic.pojo.TrafficInfo;
 
 import java.util.HashMap;
 
@@ -20,7 +20,7 @@ public class lightconf {
 
     public String view() {
         HbaseUtils hbaseUtils = new HbaseUtils();
-        Data d = JSON.parseObject(Jsonin, Data.class);
+        TrafficInfo d = JSON.parseObject(Jsonin, TrafficInfo.class);
         String rid = d.getRid();
         HashMap map = (HashMap) hbaseUtils.selectData("conf", rid);
         Jsonout = JSON.toJSONString(map);
@@ -29,7 +29,7 @@ public class lightconf {
 
     public String add() {
         HbaseUtils hbaseUtils = new HbaseUtils();
-        Data d = JSON.parseObject(Jsonin, Data.class);
+        TrafficInfo d = JSON.parseObject(Jsonin, TrafficInfo.class);
         String rid = d.getRid();
         String mid = d.getMid();
         String begin = d.getBegin();
@@ -45,7 +45,7 @@ public class lightconf {
 
     public String delete() {
         HbaseUtils hbaseUtils = new HbaseUtils();
-        Data d = JSON.parseObject(Jsonin, Data.class);
+        TrafficInfo d = JSON.parseObject(Jsonin, TrafficInfo.class);
         String rid = d.getRid();
         String mid = d.getMid();
         hbaseUtils.insertData("conf", rid, "light", "mid", mid);

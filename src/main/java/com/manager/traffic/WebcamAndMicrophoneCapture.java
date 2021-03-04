@@ -1,22 +1,21 @@
+package com.manager.traffic;
+
+import org.bytedeco.javacpp.Loader;
+import org.bytedeco.javacpp.avcodec;
+import org.bytedeco.javacpp.opencv_objdetect;
+import org.bytedeco.javacv.CanvasFrame;
+import org.bytedeco.javacv.FFmpegFrameRecorder;
+import org.bytedeco.javacv.Frame;
+import org.bytedeco.javacv.FrameGrabber;
+import org.bytedeco.javacv.FrameRecorder.Exception;
+
+import javax.sound.sampled.*;
+import javax.swing.*;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.ShortBuffer;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-
-import javax.sound.sampled.AudioFormat;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.DataLine;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.Mixer;
-import javax.sound.sampled.TargetDataLine;
-import javax.swing.*;
-
-import org.bytedeco.javacpp.Loader;
-import org.bytedeco.javacpp.avcodec;
-import org.bytedeco.javacpp.opencv_objdetect;
-import org.bytedeco.javacv.*;
-import org.bytedeco.javacv.FrameRecorder.Exception;
 
 public class WebcamAndMicrophoneCapture
 {

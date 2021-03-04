@@ -1,4 +1,4 @@
-package dao.onetoone_dispache;
+package com.manager.traffic.dao.onetoone_dispache;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;

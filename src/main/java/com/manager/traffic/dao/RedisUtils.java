@@ -1,4 +1,4 @@
-package dao;
+package com.manager.traffic.dao;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;

@@ -5,26 +5,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97eb8c8e-6c2c-4b9e-b364-7e7fbf146686" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/ThreadPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Controller/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Controller/hello.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Controller/lightconf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Controller/log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Controller/roadconf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Handler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/NettyServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/WebcamAndMicrophoneCapture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Websocket/ChannelSupervise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/dao/HbaseUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/dao/RedisOperating.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/dao/RedisUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/dao/onetoone_dispache/Recv.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/dao/onetoone_dispache/Sender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/exception/ErrorCodeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/Action.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/HttpLabel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/Info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/ResponseResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/TrafficInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/HttpRouter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/MyRuntimeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/RequestBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/RequestMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/ThreadPool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/lightconf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/lightconf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/roadconf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/roadconf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Handler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/lightconf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/lightconf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/roadconf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/roadconf.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Handler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Handler$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Handler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/IntelligentTraffic.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/notify-subscription.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/notify-subscription.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/notify-subscription.log.2019-08-04" beforeDir="false" afterPath="$PROJECT_DIR$/logs/notify-subscription.log.2019-08-04" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/notify-subscription.log.2019-08-07" beforeDir="false" afterPath="$PROJECT_DIR$/logs/notify-subscription.log.2019-08-07" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/hello.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/lightconf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/log.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/roadconf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Handler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NettyServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WebcamAndMicrophoneCapture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Websocket/ChannelSupervise.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/HbaseUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/RedisOperating.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/RedisUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/onetoone_dispache/Recv.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/onetoone_dispache/Sender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pojo/Data.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pojo/Info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pojo/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/ThreadPool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jquery-3.3.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jquery-3.3.1.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -51,6 +89,7 @@
       <list>
         <option value="Tag Library Descriptor" />
         <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -210,25 +249,28 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/dao" />
+      <recent name="$PROJECT_DIR$/src/main/java/Utils" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pojo.constant" />
+      <recent name="pojo" />
       <recent name="Utils" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/dao" />
-      <recent name="$PROJECT_DIR$/src/main/java/Utils" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -279,18 +321,18 @@
   </component>
   <component name="RunManager" selected="Application.test (1)">
     <configuration name="NettyServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="NettyServer" />
+      <option name="MAIN_CLASS_NAME" value="com.manager.traffic.NettyServer" />
       <module name="IntelligentTraffic" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Recv" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dao.onetoone_dispache.Recv" />
+      <option name="MAIN_CLASS_NAME" value="com.manager.traffic.dao.onetoone_dispache.Recv" />
       <module name="IntelligentTraffic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dao.onetoone_dispache.*" />
+          <option name="PATTERN" value="com.manager.traffic.dao.onetoone_dispache.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -299,24 +341,11 @@
       </method>
     </configuration>
     <configuration name="Sender" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dao.onetoone_dispache.Sender" />
+      <option name="MAIN_CLASS_NAME" value="com.manager.traffic.dao.onetoone_dispache.Sender" />
       <module name="IntelligentTraffic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dao.onetoone_dispache.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="util.test" />
-      <module name="IntelligentTraffic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="util.*" />
+          <option name="PATTERN" value="com.manager.traffic.dao.onetoone_dispache.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -329,7 +358,20 @@
       <module name="IntelligentTraffic" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Controller.*" />
+          <option name="PATTERN" value="com.manager.traffic.Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="util.test" />
+      <module name="IntelligentTraffic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.manager.traffic.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -386,7 +428,10 @@
       <workItem from="1565072003568" duration="5544000" />
       <workItem from="1565102126471" duration="16023000" />
       <workItem from="1565227715736" duration="4202000" />
-      <workItem from="1614048914372" duration="5531000" />
+      <workItem from="1614048914372" duration="5966000" />
+      <workItem from="1614066828636" duration="597000" />
+      <workItem from="1614071118346" duration="865000" />
+      <workItem from="1614754182357" duration="5940000" />
     </task>
     <servers />
   </component>
@@ -437,12 +482,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/WebcamAndMicrophoneCapture.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/manager/traffic/WebcamAndMicrophoneCapture.java</url>
           <line>33</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

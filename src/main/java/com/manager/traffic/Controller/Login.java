@@ -1,9 +1,9 @@
-package Controller;
+package com.manager.traffic.Controller;
 
-import dao.HbaseUtils;
-import dao.RedisOperating;
+import com.manager.traffic.dao.HbaseUtils;
+import com.manager.traffic.dao.RedisOperating;
 import com.alibaba.fastjson.JSON;
-import pojo.User;
+import com.manager.traffic.pojo.User;
 
 import java.util.Map;
 

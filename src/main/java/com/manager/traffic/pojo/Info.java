@@ -1,4 +1,4 @@
-package pojo;
+package com.manager.traffic.pojo;
 
 /**
  * @Author: Zsyu
@@ -7,7 +7,7 @@ package pojo;
 @lombok.Data
 public class Info {
     private String rs;
-    private Data data;
+    private TrafficInfo data;
 
 }
 

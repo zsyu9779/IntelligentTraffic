@@ -4636,7 +4636,7 @@ function showHide( elements, show ) {
 		}
 	}
 
-	// Set the display of the elements in a second loop to avoid constant reflow
+	// Set the display of the elements in a second loop to avoid com.manager.traffic.pojo.constant reflow
 	for ( index = 0; index < length; index++ ) {
 		if ( values[ index ] != null ) {
 			elements[ index ].style.display = values[ index ];

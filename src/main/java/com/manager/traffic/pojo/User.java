@@ -1,9 +1,7 @@
-package pojo;
+package com.manager.traffic.pojo;
 
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * @Author: Zsyu
