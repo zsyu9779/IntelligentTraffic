@@ -1,5 +1,6 @@
 package com.manager.traffic;
 
+import com.manager.traffic.util.ThreadPool;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -12,21 +13,23 @@ import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpRequestDecoder;
 import io.netty.handler.codec.http.HttpResponseEncoder;
 import io.netty.handler.stream.ChunkedWriteHandler;
-import com.manager.traffic.pojo.User;
-
-import java.util.concurrent.Executors;
 
  public class NettyServer {
 
      private void start() {
-         EventLoopGroup bossGroup = new NioEventLoopGroup(0x1, Executors.newCachedThreadPool());//接收组，处理来访问服务器的客户的连接请求
-         EventLoopGroup workGroup = new NioEventLoopGroup(Runtime.getRuntime().availableProcessors() * 0X3, Executors.newCachedThreadPool());//工作组，实现数据的读写
+         //接收组，处理来访问服务器的客户的连接请求 IO线程池
+         EventLoopGroup bossGroup = new NioEventLoopGroup(0x1, ThreadPool.pool);
+         //工作组，实现数据的读写 业务线程池
+         EventLoopGroup workGroup = new NioEventLoopGroup(Runtime.getRuntime().availableProcessors() * 0X3, ThreadPool.pool);
 
          try {
-             ServerBootstrap bootstrap;//服务端来设置通道参数的工具
+             //服务端来设置通道参数的工具
+             ServerBootstrap bootstrap;
              bootstrap = new ServerBootstrap();
-             bootstrap.group(bossGroup, workGroup)//将两个工作线程与通道绑定
-                     .channel(NioServerSocketChannel.class)//指定NIO模式
+             //将两个工作线程与通道绑定
+             bootstrap.group(bossGroup, workGroup)
+                     //指定NIO模式
+                     .channel(NioServerSocketChannel.class)
                      .childHandler(new ChannelInitializer<SocketChannel>() {
 
                          @Override
@@ -46,10 +49,12 @@ import java.util.concurrent.Executors;
 
 
                      })//设置回调
-                     .option(ChannelOption.SO_BACKLOG, 128)//设置TCP缓冲区
-                     .childOption(ChannelOption.SO_KEEPALIVE, true);//设置长连接
-
-             ChannelFuture future = bootstrap.bind("127.0.0.1", 6789).sync();//绑定端口
+                     //设置TCP缓冲区
+                     .option(ChannelOption.SO_BACKLOG, 128)
+                     //设置长连接
+                     .childOption(ChannelOption.SO_KEEPALIVE, true);
+             //绑定端口
+             ChannelFuture future = bootstrap.bind("127.0.0.1", 6789).sync();
              //阻止程序关闭
              future.channel().closeFuture().sync();
 
@@ -67,9 +72,6 @@ import java.util.concurrent.Executors;
          NettyServer nettyServer = new NettyServer();
          //EsUtil.getClient();
          nettyServer.start();
-
-
-
 
      }
  }

@@ -1,8 +1,7 @@
 package com.manager.traffic.util;
 
+import com.manager.traffic.pojo.Action;
 import com.manager.traffic.pojo.HttpLabel;
-import com.manager.traffic.pojo.ResponseResult;
-import io.netty.handler.codec.http.FullHttpRequest;
 import io.netty.handler.codec.http.HttpMethod;
 import lombok.extern.slf4j.Slf4j;
 
@@ -17,7 +16,7 @@ import java.util.Map;
 @Slf4j
 public class HttpRouter extends ClassLoader {
 
-    private Map<HttpLabel, Action<ResponseResult>> httpRouterAction = new HashMap<>();
+    private Map<HttpLabel, Action> httpRouterAction = new HashMap<>();
 
     private String classpath = this.getClass().getResource("").getPath();
 
@@ -58,11 +57,6 @@ public class HttpRouter extends ClassLoader {
                             controllerBeans.put(cls.getName(), cls.newInstance());
                         }
                         Action action = new Action(controllerBeans.get(cls.getName()), invokeMethod);
-                        //如果需要FullHttpRequest，就注入FullHttpRequest对象
-                        Class[] params = invokeMethod.getParameterTypes();
-                        if (params.length == 1 && params[0] == FullHttpRequest.class) {
-                            action.setInjectionFullhttprequest(true);
-                        }
                         // 保存映射关系
                         httpRouterAction.put(new HttpLabel(uri, new HttpMethod(httpMethod)), action);
                     }

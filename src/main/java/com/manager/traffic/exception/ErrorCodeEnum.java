@@ -28,6 +28,7 @@ public enum ErrorCodeEnum {
     USER_NOT_ADMIN(301, "H3009", "用户未登录"),
 
     // 4** 资源操作异常
+    BAD_REQUEST(400,"H4000","访问异常"),
     RESOURCE_NOT_FOUND(400, "H4001", "资源查询错误"),
     USER_INFO_NOT_FOUND(400, "H4004", "用户数据查询不到"),
     USER_AUTH_INFO_NOT_FOUND(400, "H4016", "用户认证数据查询不到"),

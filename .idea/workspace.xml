@@ -5,56 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97eb8c8e-6c2c-4b9e-b364-7e7fbf146686" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Controller/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Controller/hello.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Controller/lightconf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Controller/log.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Controller/roadconf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Handler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/NettyServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/WebcamAndMicrophoneCapture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Websocket/ChannelSupervise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/dao/HbaseUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/dao/RedisOperating.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/dao/RedisUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/dao/onetoone_dispache/Recv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/dao/onetoone_dispache/Sender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/exception/ErrorCodeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/Action.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/HttpLabel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/Info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/ResponseResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/TrafficInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/HttpRouter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/MyRuntimeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/RequestBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/RequestMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/ThreadPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/RouterHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/notify-subscription.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/notify-subscription.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/notify-subscription.log.2019-08-04" beforeDir="false" afterPath="$PROJECT_DIR$/logs/notify-subscription.log.2019-08-04" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/notify-subscription.log.2019-08-07" beforeDir="false" afterPath="$PROJECT_DIR$/logs/notify-subscription.log.2019-08-07" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Login.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/hello.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/lightconf.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/log.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/roadconf.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Handler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NettyServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WebcamAndMicrophoneCapture.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Websocket/ChannelSupervise.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/HbaseUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/RedisOperating.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/RedisUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/onetoone_dispache/Recv.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/onetoone_dispache/Sender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pojo/Data.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pojo/Info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pojo/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/ThreadPool.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jquery-3.3.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jquery-3.3.1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/NettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/HttpRouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/HttpRouter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/MyRuntimeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/MyRuntimeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/ThreadPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/ThreadPool.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,6 +225,7 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.manager.traffic" />
       <recent name="pojo.constant" />
       <recent name="pojo" />
       <recent name="Utils" />
@@ -431,7 +389,7 @@
       <workItem from="1614048914372" duration="5966000" />
       <workItem from="1614066828636" duration="597000" />
       <workItem from="1614071118346" duration="865000" />
-      <workItem from="1614754182357" duration="5940000" />
+      <workItem from="1614754182357" duration="9187000" />
     </task>
     <servers />
   </component>

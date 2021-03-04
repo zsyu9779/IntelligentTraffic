@@ -1,7 +1,7 @@
 package com.manager.traffic.pojo;
 
+import com.manager.traffic.exception.ErrorCodeEnum;
 import com.manager.traffic.util.MyRuntimeException;
-import io.netty.handler.codec.http.HttpResponseStatus;
 import lombok.Data;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
@@ -23,9 +23,9 @@ public class Action {
 
     private List<Class> paramsClassList;
 
-    public GeneralResponse call(Object... args) {
+    public ResponseResult call(Object... args) {
         try {
-            return (GeneralResponse) method.invoke(object, args);
+            return (ResponseResult) method.invoke(object, args);
         } catch (InvocationTargetException e) {
             Throwable targetException = e.getTargetException();
             //实现 `@ControllerAdvice` 异常处理，直接抛出自定义异常
@@ -33,10 +33,10 @@ public class Action {
                 return ((MyRuntimeException) targetException).getGeneralResponse();
             }
             log.warn("method invoke error: {}", e);
-            return new GeneralResponse(HttpResponseStatus.INTERNAL_SERVER_ERROR, String.format("Internal Error: %s", ExceptionUtils.getRootCause(e)), null);
+            return  ResponseResult.failure(ErrorCodeEnum.UNKNOWN_ERROR.getCode(), String.format("Internal Error: %s", ExceptionUtils.getRootCause(e)));
         } catch (IllegalAccessException e) {
             log.warn("method invoke error: {}", e);
-            return new GeneralResponse(HttpResponseStatus.INTERNAL_SERVER_ERROR, String.format("Internal Error: %s", ExceptionUtils.getRootCause(e)), null);
+            return ResponseResult.failure(ErrorCodeEnum.UNKNOWN_ERROR.getCode(), String.format("Internal Error: %s", ExceptionUtils.getRootCause(e)));
         }
     }
 }

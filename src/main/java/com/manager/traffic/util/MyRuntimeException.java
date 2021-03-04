@@ -7,15 +7,19 @@ import lombok.Data;
 @Data
 public class MyRuntimeException extends RuntimeException {
 
+    private ResponseResult generalResponse;
 
     public MyRuntimeException(String message) {
-        ResponseResult.failure(ErrorCodeEnum.SYSTEM_ERROR.getCode(), message);
+        generalResponse = ResponseResult.failure(ErrorCodeEnum.SYSTEM_ERROR.getCode(), message);
     }
 
     public MyRuntimeException(ErrorCodeEnum status, String message) {
-        ResponseResult.failure(status.getCode(), message);
+        generalResponse =ResponseResult.failure(status.getCode(), message);
     }
 
+    public MyRuntimeException(ResponseResult generalResponse) {
+        this.generalResponse = generalResponse;
+    }
 
     @Override
     public synchronized Throwable fillInStackTrace() {
