@@ -4,7 +4,7 @@ package com.manager.traffic;
 import com.manager.traffic.exception.ErrorCodeEnum;
 import com.manager.traffic.pojo.Action;
 import com.manager.traffic.pojo.HttpLabel;
-import com.manager.traffic.pojo.ResponseResult;
+import com.manager.traffic.util.ResponseResult;
 import com.manager.traffic.util.*;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -19,10 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 
-/**
- * @author 李文浩
- * @date 2018/9/5
- */
+
 @Slf4j
 public class RouterHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
 

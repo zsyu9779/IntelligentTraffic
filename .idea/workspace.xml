@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97eb8c8e-6c2c-4b9e-b364-7e7fbf146686" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/RouterHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/NettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/RouterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/RouterHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/HttpRouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/HttpRouter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/ResponseResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/ResponseResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/MyRuntimeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/MyRuntimeException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/ThreadPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/ThreadPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/ResponseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/ResponseUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,6 +224,7 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.manager.traffic.util" />
       <recent name="com.manager.traffic" />
       <recent name="pojo.constant" />
       <recent name="pojo" />
@@ -389,7 +389,7 @@
       <workItem from="1614048914372" duration="5966000" />
       <workItem from="1614066828636" duration="597000" />
       <workItem from="1614071118346" duration="865000" />
-      <workItem from="1614754182357" duration="9187000" />
+      <workItem from="1614754182357" duration="13231000" />
     </task>
     <servers />
   </component>

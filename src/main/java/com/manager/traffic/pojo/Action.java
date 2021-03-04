@@ -2,6 +2,7 @@ package com.manager.traffic.pojo;
 
 import com.manager.traffic.exception.ErrorCodeEnum;
 import com.manager.traffic.util.MyRuntimeException;
+import com.manager.traffic.util.ResponseResult;
 import lombok.Data;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;

@@ -2,16 +2,12 @@ package com.manager.traffic.util;
 
 
 import com.manager.traffic.exception.ErrorCodeEnum;
-import com.manager.traffic.pojo.ResponseResult;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.*;
 
-/**
- * @author 李文浩
- * @date 2018/9/18
- */
+
 public class ResponseUtil {
     private ResponseUtil() {
     }

@@ -1,7 +1,6 @@
 package com.manager.traffic.util;
 
 import com.manager.traffic.exception.ErrorCodeEnum;
-import com.manager.traffic.pojo.ResponseResult;
 import lombok.Data;
 
 @Data

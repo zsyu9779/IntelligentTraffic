@@ -1,4 +1,4 @@
-package com.manager.traffic.pojo;
+package com.manager.traffic.util;
 
 import com.manager.traffic.exception.ErrorCodeEnum;
 import lombok.AllArgsConstructor;
