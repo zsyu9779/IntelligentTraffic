@@ -47,7 +47,7 @@
 2019-08-04 23:27:54,287 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
 2019-08-04 23:28:29,166 - -Dio.netty.buffer.checkAccessible: true
 2019-08-04 23:28:29,166 - -Dio.netty.buffer.checkBounds: true
-2019-08-04 23:28:29,167 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@4f0e5513
+2019-08-04 23:28:29,167 - Loaded default ResourceLeakDetector: io.netty.com.manager.traffic.util.ResourceLeakDetector@4f0e5513
 2019-08-04 23:28:29,205 - 客户端加入连接：[id: 0xc4cb0b39, L:/127.0.0.1:6789 - R:/127.0.0.1:51244]
 2019-08-04 23:28:29,211 - -Dio.netty.recycler.maxCapacityPerThread: 4096
 2019-08-04 23:28:29,211 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
@@ -113,7 +113,7 @@
 2019-08-04 23:39:08,958 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
 2019-08-04 23:40:59,350 - -Dio.netty.buffer.checkAccessible: true
 2019-08-04 23:40:59,351 - -Dio.netty.buffer.checkBounds: true
-2019-08-04 23:40:59,352 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@55a50553
+2019-08-04 23:40:59,352 - Loaded default ResourceLeakDetector: io.netty.com.manager.traffic.util.ResourceLeakDetector@55a50553
 2019-08-04 23:40:59,390 - 客户端加入连接：[id: 0x49a60016, L:/127.0.0.1:6789 - R:/127.0.0.1:57614]
 2019-08-04 23:40:59,396 - -Dio.netty.recycler.maxCapacityPerThread: 4096
 2019-08-04 23:40:59,396 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
@@ -132,8 +132,8 @@
 2019-08-04 23:41:35,203 - data 
 2019-08-04 23:41:35,203 - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
 java.lang.ArrayIndexOutOfBoundsException: 1
-	at Handler.handleHttpRequest(Handler.java:81)
-	at Handler.channelRead(Handler.java:45)
+	at com.manager.traffic.Handler.handleHttpRequest(com.manager.traffic.Handler.java:81)
+	at com.manager.traffic.Handler.channelRead(com.manager.traffic.Handler.java:45)
 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
@@ -155,10 +155,10 @@ java.lang.ArrayIndexOutOfBoundsException: 1
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:617)
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:534)
 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.com.manager.traffic.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
+	at io.netty.com.manager.traffic.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.com.manager.traffic.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.com.manager.traffic.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 2019-08-04 23:41:42,784 - 客户端断开连接：[id: 0x578895a8, L:/127.0.0.1:6789 ! R:/127.0.0.1:57924]
 2019-08-04 23:41:42,789 - 客户端加入连接：[id: 0x3faf750c, L:/127.0.0.1:6789 - R:/127.0.0.1:57996]
@@ -172,15 +172,15 @@ java.lang.ArrayIndexOutOfBoundsException: 1
 2019-08-04 23:41:42,807 - URL: /favicon.ico
 2019-08-04 23:41:42,807 - data 
 2019-08-04 23:41:42,808 - An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
-java.lang.ClassNotFoundException: Controller.favicon.ico
+java.lang.ClassNotFoundException: com.manager.traffic.Controller.favicon.ico
 	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
 	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
 	at java.lang.Class.forName0(Native Method)
 	at java.lang.Class.forName(Class.java:264)
-	at Handler.handleHttpRequest(Handler.java:83)
-	at Handler.channelRead(Handler.java:45)
+	at com.manager.traffic.Handler.handleHttpRequest(com.manager.traffic.Handler.java:83)
+	at com.manager.traffic.Handler.channelRead(com.manager.traffic.Handler.java:45)
 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:374)
 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:360)
 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:352)
@@ -202,10 +202,10 @@ java.lang.ClassNotFoundException: Controller.favicon.ico
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:617)
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:534)
 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.com.manager.traffic.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
+	at io.netty.com.manager.traffic.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.com.manager.traffic.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.com.manager.traffic.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 2019-08-04 23:42:10,756 - 客户端断开连接：[id: 0x3faf750c, L:/127.0.0.1:6789 ! R:/127.0.0.1:57996]
 2019-08-04 23:42:38,613 - 客户端加入连接：[id: 0x63935257, L:/127.0.0.1:6789 - R:/127.0.0.1:58456]
@@ -271,7 +271,7 @@ java.lang.ClassNotFoundException: Controller.favicon.ico
 2019-08-04 23:51:27,109 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
 2019-08-04 23:51:38,193 - -Dio.netty.buffer.checkAccessible: true
 2019-08-04 23:51:38,258 - -Dio.netty.buffer.checkBounds: true
-2019-08-04 23:51:38,259 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@7b2dfd27
+2019-08-04 23:51:38,259 - Loaded default ResourceLeakDetector: io.netty.com.manager.traffic.util.ResourceLeakDetector@7b2dfd27
 2019-08-04 23:51:38,297 - 客户端加入连接：[id: 0x13c2b5b4, L:/127.0.0.1:6789 - R:/127.0.0.1:34926]
 2019-08-04 23:51:38,303 - -Dio.netty.recycler.maxCapacityPerThread: 4096
 2019-08-04 23:51:38,303 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
@@ -331,7 +331,7 @@ java.lang.ClassNotFoundException: Controller.favicon.ico
 2019-08-04 23:53:41,800 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
 2019-08-04 23:53:45,993 - -Dio.netty.buffer.checkAccessible: true
 2019-08-04 23:53:45,994 - -Dio.netty.buffer.checkBounds: true
-2019-08-04 23:53:45,994 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@236b0abb
+2019-08-04 23:53:45,994 - Loaded default ResourceLeakDetector: io.netty.com.manager.traffic.util.ResourceLeakDetector@236b0abb
 2019-08-04 23:53:46,033 - 客户端加入连接：[id: 0xce2f0fb1, L:/127.0.0.1:6789 - R:/127.0.0.1:36002]
 2019-08-04 23:53:46,039 - -Dio.netty.recycler.maxCapacityPerThread: 4096
 2019-08-04 23:53:46,039 - -Dio.netty.recycler.maxSharedCapacityFactor: 2

@@ -47,7 +47,7 @@
 2019-08-08 11:17:50,215 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
 2019-08-08 11:17:57,051 - -Dio.netty.buffer.checkAccessible: true
 2019-08-08 11:17:57,052 - -Dio.netty.buffer.checkBounds: true
-2019-08-08 11:17:57,053 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@c69450f
+2019-08-08 11:17:57,053 - Loaded default ResourceLeakDetector: io.netty.com.manager.traffic.util.ResourceLeakDetector@c69450f
 2019-08-08 11:17:57,125 - 客户端加入连接：[id: 0xf1306649, L:/127.0.0.1:6789 - R:/127.0.0.1:58766]
 2019-08-08 11:17:57,150 - -Dio.netty.recycler.maxCapacityPerThread: 4096
 2019-08-08 11:17:57,150 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
@@ -193,7 +193,7 @@
 2019-08-08 11:25:32,774 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
 2019-08-08 11:25:43,627 - -Dio.netty.buffer.checkAccessible: true
 2019-08-08 11:25:43,627 - -Dio.netty.buffer.checkBounds: true
-2019-08-08 11:25:43,628 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@4c6e87c2
+2019-08-08 11:25:43,628 - Loaded default ResourceLeakDetector: io.netty.com.manager.traffic.util.ResourceLeakDetector@4c6e87c2
 2019-08-08 11:25:43,757 - 客户端加入连接：[id: 0xc0f1b10d, L:/127.0.0.1:6789 - R:/127.0.0.1:58968]
 2019-08-08 11:25:43,764 - -Dio.netty.recycler.maxCapacityPerThread: 4096
 2019-08-08 11:25:43,764 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
@@ -305,7 +305,7 @@
 2019-08-08 11:27:58,702 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
 2019-08-08 11:28:03,454 - -Dio.netty.buffer.checkAccessible: true
 2019-08-08 11:28:03,455 - -Dio.netty.buffer.checkBounds: true
-2019-08-08 11:28:03,456 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@55a50553
+2019-08-08 11:28:03,456 - Loaded default ResourceLeakDetector: io.netty.com.manager.traffic.util.ResourceLeakDetector@55a50553
 2019-08-08 11:28:03,494 - 客户端加入连接：[id: 0x1d75b4be, L:/127.0.0.1:6789 - R:/127.0.0.1:59024]
 2019-08-08 11:28:03,499 - -Dio.netty.recycler.maxCapacityPerThread: 4096
 2019-08-08 11:28:03,499 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
@@ -365,7 +365,7 @@
 2019-08-08 11:28:14,795 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
 2019-08-08 11:28:19,063 - -Dio.netty.buffer.checkAccessible: true
 2019-08-08 11:28:19,064 - -Dio.netty.buffer.checkBounds: true
-2019-08-08 11:28:19,065 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@563469c2
+2019-08-08 11:28:19,065 - Loaded default ResourceLeakDetector: io.netty.com.manager.traffic.util.ResourceLeakDetector@563469c2
 2019-08-08 11:28:19,112 - 客户端加入连接：[id: 0xad416411, L:/127.0.0.1:6789 - R:/127.0.0.1:59050]
 2019-08-08 11:28:19,119 - -Dio.netty.recycler.maxCapacityPerThread: 4096
 2019-08-08 11:28:19,119 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
