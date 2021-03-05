@@ -1,4 +1,4 @@
-package com.manager.traffic.pojo;
+package com.manager.traffic.entity;
 
 /**
  * @Author: Zsyu

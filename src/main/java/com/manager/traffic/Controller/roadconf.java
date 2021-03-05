@@ -2,7 +2,7 @@ package com.manager.traffic.Controller;
 
 import com.alibaba.fastjson.JSON;
 import com.manager.traffic.dao.HbaseUtils;
-import com.manager.traffic.pojo.TrafficInfo;
+import com.manager.traffic.entity.TrafficInfo;
 
 import java.util.HashMap;
 

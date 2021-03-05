@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!-- 外部属性配置文件 -->
+    <properties resource="jdbc.properties" />
+
+    <!-- 为SQL映射配置文件的parameterType和resultType来设置别名。别名默认为首字母小写。 -->
+    <typeAliases>
+        <package name="com.manager.traffic.entity"/>
+    </typeAliases>
+
+    <!-- environment 元素体中包含了事务管理和连接池的配置 -->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <!-- DBCP数据源 -->
+            <dataSource type="com.itiis.client.dataSource.DBCPDataSourceFactory">
+                <property name="driverClassName" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+                <property name="minIdle" value="5"/>
+                <property name="maxIdle" value="10"/><!-- maxIdle，最大空闲数 -->
+                <property name="maxActive" value="10"/>
+                <property name="validationQuery" value="SELECT 1"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!-- mappers 元素包含一组 mapper 映射器（这些 mapper 的 XML 文件包含了 SQL 代码和映射定义信息） -->
+    <mappers>
+        <mapper resource="mappersClient/TrafficSourceMapper.xml"/>
+    </mappers>
+
+</configuration>

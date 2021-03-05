@@ -1,4 +1,4 @@
-package com.manager.traffic.pojo;
+package com.manager.traffic.util;
 
 import io.netty.handler.codec.http.HttpMethod;
 import lombok.AllArgsConstructor;

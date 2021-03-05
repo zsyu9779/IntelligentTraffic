@@ -2,8 +2,8 @@ package com.manager.traffic;
 
 
 import com.manager.traffic.exception.ErrorCodeEnum;
-import com.manager.traffic.pojo.Action;
-import com.manager.traffic.pojo.HttpLabel;
+import com.manager.traffic.util.Action;
+import com.manager.traffic.util.HttpLabel;
 import com.manager.traffic.util.ResponseResult;
 import com.manager.traffic.util.*;
 import io.netty.channel.ChannelHandlerContext;

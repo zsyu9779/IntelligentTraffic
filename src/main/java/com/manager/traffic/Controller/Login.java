@@ -3,7 +3,7 @@ package com.manager.traffic.Controller;
 import com.manager.traffic.dao.HbaseUtils;
 import com.manager.traffic.dao.RedisOperating;
 import com.alibaba.fastjson.JSON;
-import com.manager.traffic.pojo.User;
+import com.manager.traffic.entity.User;
 
 import java.util.Map;
 

@@ -1,7 +1,5 @@
 package com.manager.traffic.util;
 
-import com.manager.traffic.pojo.Action;
-import com.manager.traffic.pojo.HttpLabel;
 import io.netty.handler.codec.http.HttpMethod;
 import lombok.extern.slf4j.Slf4j;
 

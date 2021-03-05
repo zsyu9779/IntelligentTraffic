@@ -8,32 +8,28 @@ import io.netty.util.CharsetUtil;
 
 import java.lang.reflect.Type;
 
-/**
- * @author 李文浩
- * @date 2018/9/5
- */
 public class JsonUtil {
 
     private JsonUtil() {
 
     }
 
-    private static final GsonBuilder gsonBuilder = new GsonBuilder();
+    private static final GsonBuilder GSON_BUILDER = new GsonBuilder();
 
-    private static final Gson gson = gsonBuilder.disableHtmlEscaping().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
+    private static final Gson GSON = GSON_BUILDER.disableHtmlEscaping().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
 
     public static String toJson(Object o) {
-        return gson.toJson(o);
+        return GSON.toJson(o);
     }
 
     public static <T> T fromJson(FullHttpRequest request, Class<T> c) {
         ByteBuf jsonBuf = request.content();
         String jsonStr = jsonBuf.toString(CharsetUtil.UTF_8);
-        return gson.fromJson(jsonStr, c);
+        return GSON.fromJson(jsonStr, c);
     }
 
     public static <T> T fromJson(String json, Class<T> c) {
-        return gson.fromJson(json, c);
+        return GSON.fromJson(json, c);
     }
 
     /**
@@ -49,6 +45,6 @@ public class JsonUtil {
     public static <T> T fromJson(FullHttpRequest request, Type type) {
         ByteBuf jsonBuf = request.content();
         String json = jsonBuf.toString(CharsetUtil.UTF_8);
-        return gson.fromJson(json, type);
+        return GSON.fromJson(json, type);
     }
 }
