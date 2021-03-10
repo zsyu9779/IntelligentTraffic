@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97eb8c8e-6c2c-4b9e-b364-7e7fbf146686" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/mapper/DBCPDataSourceFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/mapper/mybatisConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/entity/CarInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Controller/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Controller/lightconf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Controller/lightconf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Controller/roadconf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/Controller/roadconf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/RouterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/RouterHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/HttpLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/HttpLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/entity/Info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/TrafficInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/entity/TrafficInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/HttpRouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/HttpRouter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/JsonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/manager/traffic/util/JsonUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,6 +216,7 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/manager/traffic/dao" />
       <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/main" />
@@ -287,7 +275,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.test (1)">
+  <component name="RunManager" selected="Application.NettyServer">
     <configuration name="NettyServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.manager.traffic.NettyServer" />
       <module name="IntelligentTraffic" />
@@ -347,20 +335,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.test (1)" />
         <item itemvalue="Application.NettyServer" />
         <item itemvalue="Application.Sender" />
         <item itemvalue="Application.Recv" />
@@ -399,7 +388,8 @@
       <workItem from="1614048914372" duration="5966000" />
       <workItem from="1614066828636" duration="597000" />
       <workItem from="1614071118346" duration="865000" />
-      <workItem from="1614754182357" duration="17113000" />
+      <workItem from="1614754182357" duration="18402000" />
+      <workItem from="1615277759634" duration="4831000" />
     </task>
     <servers />
   </component>
